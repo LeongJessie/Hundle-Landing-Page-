@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-purple-700: hsl(257, 40%, 49%);
+  --primary-magenta-400: hsl(300, 69%, 71%);
+  --white: #fff;
+
+  --typo-poppins: "Poppins";
+  --typo-opensans: "Open Sans";
+
+  --weight-400: 400;
+  --weight-600: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.hero {
+  padding: 0rem 5rem;
+  min-height: 100vh;
+  background-color: var(--primary-purple-700);
+  background-image: url(../images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: auto;
+  height: auto;
+}
+.hero-header {
+  padding: 3rem 0rem;
+}
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 5rem;
+}
+.hero-visual {
+  flex: 1;
+}
+.hero-visual img {
+  width: 100%;
+  height: auto;
+}
+.hero-text {
+  flex: 1;
+  color: var(--white);
+}
+.hero-text h1 {
+  font-size: clamp(1.3rem, 1.6rem + 0.6vw, 2rem);
+  font-family: var(--typo-poppins);
+}
+.hero-text p {
+  font-size: clamp(1rem, 1.1rem + 0.08vw, 1.3rem);
+  padding: 2.5rem 0rem;
+  font-family: var(--typo-opensans);
+  font-weight: var(--weight-400);
+}
+.hero-text button {
+  font-size: clamp(1rem, 1.1rem + 0.08vw, 1.4rem);
+  font-family: var(--typo-poppins);
+  font-weight: var(--weight-600);
+  color: var(--primary-purple-700);
+  padding: 1rem 5rem;
+  border-radius: 5rem;
+  border: none;
+  box-shadow: 1px 6px 12px 0px rgba(0, 0, 0, 0.2);
+}
+.hero-text button:hover {
+  color: var(--white);
+  background-color: var(--primary-magenta-400);
+}
+.hero-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.hero-socials a {
+  text-align: center;
+  border: 0.1rem solid var(--white);
+  border-radius: 5rem;
+  padding: 0.5rem;
+}
+.hero-socials a:hover {
+  border: 0.1rem solid var(--primary-magenta-400);
+}
+.hero-socials i {
+  color: var(--white);
+  text-align: center;
+}
+.hero-socials i:hover {
+  color: var(--primary-magenta-400);
+}
+
+@media (max-width: 30rem) {
+  .hero {
+    background-image: url(../images/bg-mobile.svg);
+    padding: 0rem 2rem;
+    background-color: var(--primary-purple-700);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    width: auto;
+    height: auto;
+  }
+  .hero-header {
+    padding: 1.5rem 0rem;
+  }
+  .hero-header img {
+    width: 10rem;
+    height: auto;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+  .hero-text{
+    text-align: center;
+    padding: 1rem 0rem;
+  }
+  .hero-socials{
+    padding: 1rem 0rem 2rem 0rem;
+    justify-content: center;
+  }
+}
