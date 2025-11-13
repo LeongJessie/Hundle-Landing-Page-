@@ -10,6 +10,8 @@
 
   --weight-400: 400;
   --weight-600: 600;
+
+  --box-shadow: 1px 6px 12px 0px rgba(0, 0, 0, 0.2); 
 }
 
 * {
@@ -20,7 +22,7 @@
 }
 
 .hero {
-  padding: 0rem 5rem;
+  padding: 0rem clamp(1rem, 5vw, 5rem);
   min-height: 100vh;
   background-color: var(--primary-purple-700);
   background-image: url(../images/bg-desktop.svg);
@@ -38,7 +40,7 @@
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  margin-top: 5rem;
+  margin-block-start: 5rem;
 }
 .hero-visual {
   flex: 1;
@@ -69,7 +71,7 @@
   padding: 1rem 5rem;
   border-radius: 5rem;
   border: none;
-  box-shadow: 1px 6px 12px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 .hero-text button:hover {
   color: var(--white);
